@@ -59,8 +59,8 @@ def download_folder(folder_id):
     path = '/usr/local/lib/python3.6/dist-packages/download.py'
     urlretrieve(url, path)
     # recursive download
-    import download
-    download.download_folder(service, folder_id, './', folder_name)
+    from download import download_folder
+    download_folder(service, folder_id, './', folder_name)
     return folder_name
 
 
